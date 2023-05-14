@@ -52,10 +52,10 @@ You'll find the following directories:
 
 Liquidity wallet can be used as staking rewards. To ensure that not to lose money by offering reward, need to set up an algorithm  in a way that ensures the rewards distributed are less than the fees earned from transactions in the pool. This can be achieved by adjusting the percentage of fees charged on transactions to cover the cost of rewards.
 
-1 - Set a target APR for the liquidity pool
-2 - Set a royalty fee percentage for minting that will cover the cost of rewards and ensure a profit margin above the target APR.
-3-  Monitor the value of the pool and adjust the fee percentage and reward distribution rate as necessary to maintain the target APR and profitability.
-4- lock-up period can be implemented. So we encourage users to hold their assets  in the pool for a longer period, which will increase the stability of the token price and reduce the risk of price fluctuations
+- Set a target APR for the liquidity pool
+- Set a royalty fee percentage for minting that will cover the cost of rewards and ensure a profit margin above the target APR.
+- Monitor the value of the pool and adjust the fee percentage and reward distribution rate as necessary to maintain the target APR and profitability.
+- lock-up period can be implemented. So we encourage users to hold their assets  in the pool for a longer period, which will increase the stability of the token price and reduce the risk of price fluctuations
 
 
 By setting up this algorithm , we can offer daily APR to users without risking our funds.
