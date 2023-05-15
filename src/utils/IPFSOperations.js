@@ -16,7 +16,7 @@ export const uploadJSONToIPFS = async(JSONBody) => {
         .post(url, JSONBody, {
             headers: {
                 pinata_api_key: process.env.REACT_APP_PINATAKEY,
-                pinata_secret_api_key: process.env.REACT_APP_PINATAKSECRET,
+                pinata_secret_api_key: process.env.REACT_APP_PINATASECRET,
             }
         })
         .then(function (response) {
