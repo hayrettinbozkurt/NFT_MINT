@@ -25,7 +25,7 @@ It's an ERC-721 mint application. User can give necessary info to application th
       ```
      deploy to local : npm run  nft_deploydev
 
-     deploy to fujinet : nft_deployfuji
+     deploy to fujinet : npm run nft_deployfuji
 
       ```
     
