@@ -15,7 +15,10 @@ It's an ERC-721 mint application. User can give necessary info to application th
  Installation process
 
    - Download and Install NodeJs LTS version from [NodeJs Official Page](https://nodejs.org/en/download/).
-   - Configure .env file. You need to define "REACT_APP_PVKEY"(private key of your metamask). It is needed for testing and smart contract deployment.
+   - Configure .env file. 
+      - REACT_APP_PVKEY(private key of your metamask)      # for testing and smart contract deployment
+      - REACT_APP_PINATAKEY                                # used for pinata interaction
+      - REACT_APP_PINATASECRET                             # used for pinata interaction 
    - ./run.sh file can be used to install and run application.
    -  Metamask installation also need for interaction with dapp.
    - Smart contracts can be deployed locally or fujinet. 
