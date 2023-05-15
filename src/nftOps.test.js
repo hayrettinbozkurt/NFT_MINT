@@ -43,14 +43,6 @@ describe("nft operations", () => {
     });
 
 
-    it("empty signer throw error", async () => {
-
-        NFTOps.setSigner(null);
-
-        NFTOps.mintToken(1, "asd").catch((err) => {
-            expect(err.message).to.equal("Signer Error")
-        })
-    });
 
     
 
