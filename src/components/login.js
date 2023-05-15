@@ -3,6 +3,7 @@
  
 import { ethers } from "ethers";
 import getSigner from "../bc/helper/web3Helper";
+import NFTOps from "../bc/service/nftOps";
  
 
 
@@ -13,10 +14,12 @@ async function clc(){
     
  
    const signer= await getSigner();
+
+   
    if(signer)
    { 
     
-
+    NFTOps.setSigner(signer);
     window.location.replace("/mintNFT");
    }
    else{

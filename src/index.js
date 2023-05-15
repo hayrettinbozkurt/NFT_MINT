@@ -12,7 +12,7 @@ import {
  import Login from './components/login';
  
  import NFTPage from './components/NFTpage';
-import Testpage from './components/testpage';
+ 
 
   
  
@@ -24,7 +24,7 @@ root.render(
        
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Testpage />}/>
+                    <Route path="/" element={<Login />}/>
                     <Route path="/mintNFT" element={<NFTPage />}/> 
                 </Routes>
             </BrowserRouter>

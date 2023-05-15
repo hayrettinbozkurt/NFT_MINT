@@ -19,28 +19,6 @@ export default function NFTPage() {
     const [url, setUrl] = useState();
     const [fileURL, setFileURL] = useState("");
     
-        useEffect(() => {
-            (async () => {
-                const signer = await getSigner();
-                NFTOps.setSigner(signer);
-               
-            })()
-    
-    
-        }
-    
-            , []);
-     
-
-    useEffect(() => {
-        if (window.ethereum == undefined)
-            return;
-        else {
-            getSigner().then((signer) => { NFTOps.setSigner(signer); });
-
-        }
-
-    }, []);
 
     function activateBtn(id, msg="") {
         const btn = document.getElementById(id);
@@ -71,7 +49,7 @@ export default function NFTPage() {
 
         // check file is empty
         const schema = Joi.object({
-            file: Joi.required().messages({ "any.required": "File need to be uploaded" })
+            file: Joi.required().messages({ "any.required": "File is empty choose file." })
         });
         const result = schema.validate({ "file": file }, { abortEarly: false });
 

@@ -1,6 +1,6 @@
 import { ethers } from "ethers";
 
-import  { getContract } from "../helper/web3Helper";
+import  getSigner, { getContract } from "../helper/web3Helper";
 
 
 export default class NFTOps {
@@ -26,7 +26,8 @@ export default class NFTOps {
         }
 
         if(!this.signer){
-            throw new Error("Signer Error");
+          const signer= await getSigner();
+          this.signer=signer; 
         }
 
         // 10% of price will transfer to treasury and liquidty wallet

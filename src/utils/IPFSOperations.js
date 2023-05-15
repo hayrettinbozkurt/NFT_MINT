@@ -1,9 +1,6 @@
 import axios from 'axios';
 
-
-
-const key = "5519da0829eb77482d0d";
-const secret = "01f9260310cd80425f22d7ff8fc46a9b3a7b03c6dc90d6c58a3270b975e02e42";
+ 
 
  
 const FormData = require('form-data');
@@ -18,8 +15,8 @@ export const uploadJSONToIPFS = async(JSONBody) => {
     return axios 
         .post(url, JSONBody, {
             headers: {
-                pinata_api_key: key,
-                pinata_secret_api_key: secret,
+                pinata_api_key: process.env.REACT_APP_PINATAKEY,
+                pinata_secret_api_key: process.env.REACT_APP_PINATAKSECRET,
             }
         })
         .then(function (response) {
@@ -77,8 +74,8 @@ export const uploadFileToIPFS = async(file) => {
             maxBodyLength: 'Infinity',
             headers: {
                 'Content-Type': `multipart/form-data; boundary=${data._boundary}`,
-                pinata_api_key: key,
-                pinata_secret_api_key: secret,
+                pinata_api_key: process.env.REACT_APP_PINATAKEY,
+                pinata_secret_api_key: process.env.REACT_APP_PINATASECRET,
             }
         })
         .then(function (response) {
